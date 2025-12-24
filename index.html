@@ -117,31 +117,37 @@
 
 /* Certifications Section */
 .certificates {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 3rem;
-    justify-content: center;
-	flex-wrap: wrap;
-	margin-top: 2rem; 
+    justify-items: center;
+    margin-top: 2rem;
 }
 
+/* Normal certificates */
 .certificate-item {
     border: none !important;
-    margin-bottom: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-	flex-direction: column; 
-	text-align: center;
-	padding: 1rem;
+    text-align: center;
+    padding: 1rem;
 }
 
 .certificate-img {
-    border-radius: 1rem !important;
-    width: 100% !important;
-    max-width: 250px; /* Adjust based on image size */
-    object-fit: cover !important;
-	text-align: center;
-	margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 1rem;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+/* ONLY first two certificates large */
+.certificate-large {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+}
+
+.certificate-large .certificate-img {
+    max-width: 600px;
 }
 
 
@@ -471,10 +477,11 @@ directly mirroring the resolution of trade operations breaks.</li>
     <div class="underline"></div>
 </div>
 <br>
-<div class="certificates">
+<div class="certificates">	
 
 
-	<div class="certificate-item certificate-large">
+   
+<div class="certificate-item certificate-large">
     <img src="images/CIBOP (1).png" alt="Special Certification" class="certificate-img"/>
 </div>
 
@@ -485,16 +492,8 @@ directly mirroring the resolution of trade operations breaks.</li>
 
 
 
-
-
 	
     <div class="certificate-item">
-
-
-
-
-
-		
         <img src="images/Mern.png" alt="MERN Certification" class="certificate-img"/>
 		<p><a href="https://drive.google.com/file/d/1w6sYaiS92fg05y9H3rcmR3c-pcGWlKfH/view?usp=drive_link" class="Link py-3 px-3">View</a></p>
     </div>
